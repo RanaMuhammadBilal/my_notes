@@ -86,7 +86,7 @@ class MyAddNotePage extends State<AddNotePage>{
                         Navigator.pop(context, true);
                       }else{
                         CherryToast.error(
-                          title: Text('Please Fill ALl Fields!'),
+                          title: Text('Please Fill All Fields!'),
                           toastPosition: Position.bottom,
                           animationType: AnimationType.fromBottom,
                           backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.grey.shade900 : Colors.white,
