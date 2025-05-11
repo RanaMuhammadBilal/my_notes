@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:my_notes/Settings.dart';
 import 'package:my_notes/ThemeProvider.dart';
 import 'package:my_notes/add_note_page.dart';
+import 'package:my_notes/auth_page.dart';
+import 'package:my_notes/data/AuthenticationProvider.dart';
 import 'package:my_notes/data/local/db_helper.dart';
 import 'package:my_notes/db_provider.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +16,9 @@ void main() {
   runApp(
     MultiProvider(providers: [
       ChangeNotifierProvider(create: (context)=> ThemeProvider()),
+      ChangeNotifierProvider(create: (context)=> AuthenticationProvider()),
       ChangeNotifierProvider(create: (context)=> DBProvider(dbHelper: DBHelper.getInstance)),
+
     ], child: MyApp(),),
   );
 }
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MyNotes(),
+      home: context.read<AuthenticationProvider>().getIsAuthenticateValue() ? AuthPage() : MyNotes()
     );
   }
 }
