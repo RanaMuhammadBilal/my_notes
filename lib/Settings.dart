@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_notes/AuthenticationProvider.dart';
 import 'package:my_notes/ThemeProvider.dart';
 import 'package:my_notes/data/AuthenticationProvider.dart';
 import 'package:provider/provider.dart';

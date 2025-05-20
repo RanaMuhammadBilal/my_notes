@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cherry_toast/cherry_toast.dart';
 import 'package:cherry_toast/resources/arrays.dart';
 import 'package:flutter/material.dart';
+import 'package:my_notes/AuthenticationProvider.dart';
 import 'package:my_notes/Settings.dart';
 import 'package:my_notes/ThemeProvider.dart';
 import 'package:my_notes/add_note_page.dart';
